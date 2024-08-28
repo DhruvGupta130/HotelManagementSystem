@@ -37,7 +37,7 @@ const EditProfilePage = () => {
         }
         try {
             await ApiService.deleteUser(user.id);
-            await ApiService.logout
+            ApiService.logout();
             navigate('/home');
         } catch (error) {
             setError(error.message);

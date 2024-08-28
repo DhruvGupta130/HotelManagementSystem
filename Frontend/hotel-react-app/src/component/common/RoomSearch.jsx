@@ -37,11 +37,16 @@ const RoomSearch = ({ handleSearchResult }) => {
       return false;
     }
     try {
-      // Convert startDate to the desired format
-      const formattedStartDate = startDate ? startDate.toISOString().split('T')[0] : null;
-      const formattedEndDate = endDate ? endDate.toISOString().split('T')[0] : null;
+      // Convert dates to YYYY-MM-DD format, adjusting for time zone differences
+      const formattedCheckInDate = new Date(startDate.getTime() - (startDate.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
+      const formattedCheckOutDate = new Date(endDate.getTime() - (endDate.getTimezoneOffset() * 60000)).toISOString().split('T')[0];
+
+      // Log the original dates for debugging
+      console.log("Formated Check-in Date:", formattedCheckInDate);
+      console.log("Formated Check-out Date:", formattedCheckOutDate);
+
       // Call the API to fetch available rooms
-      const response = await ApiService.getAvailableRoomsByDateAndType(formattedStartDate, formattedEndDate, roomType);
+      const response = await ApiService.getAvailableRoomsByDateAndType(formattedCheckInDate, formattedCheckOutDate, roomType);
 
       // Check if the response is successful
       if (response.statusCode === 200) {

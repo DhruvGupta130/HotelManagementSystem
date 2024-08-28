@@ -33,10 +33,9 @@ public class BookingService implements IBookingService {
     public Response bookRoom(long roomId, long userId, BookingEntity bookingEntity) {
         Response response = new Response();
         try {
-            if (bookingEntity.getCheckOutDate().isBefore(bookingEntity.getCheckInDate())
-                    || bookingEntity.getCheckInDate().isBefore(LocalDate.now())
-                    || bookingEntity.getCheckOutDate().isBefore(LocalDate.now())) {
-                throw new IllegalArgumentException("Please Enter the correct date");
+            if (bookingEntity.getCheckInDate().isBefore(LocalDate.now())
+            || bookingEntity.getCheckOutDate().isBefore(bookingEntity.getCheckInDate())) {
+                throw new IllegalArgumentException("Please Choose the correct date");
             }
             RoomEntity room = roomRepo.findById(roomId).orElseThrow(() -> new HotelException("Room not found"));
             UserEntity user = userRepo.findById(userId).orElseThrow(() -> new HotelException("User not found"));

@@ -43,7 +43,7 @@ public class UserService implements IUserService {
             response.setMessage("Successfully logged in");
         } catch (Exception e) {
             response.setStatusCode(404);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }
@@ -65,7 +65,7 @@ public class UserService implements IUserService {
             response.setUser(userDTO);
         }catch (Exception e){
             response.setStatusCode(400);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }
@@ -81,7 +81,7 @@ public class UserService implements IUserService {
             response.setUserList(userDTOS);
         }catch (Exception e){
             response.setStatusCode(400);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }
@@ -98,7 +98,7 @@ public class UserService implements IUserService {
             response.setMessage("Successfully retrieved user booking history");
         } catch (Exception e) {
             response.setStatusCode(400);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }
@@ -114,7 +114,7 @@ public class UserService implements IUserService {
             response.setMessage("Successfully deleted user");
         } catch (Exception e) {
             response.setStatusCode(400);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }
@@ -143,7 +143,7 @@ public class UserService implements IUserService {
             response.setUser(userDTO);
         }catch (Exception e){
             response.setStatusCode(400);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }
@@ -160,7 +160,7 @@ public class UserService implements IUserService {
             response.setMessage("Successfully retrieved user");
         } catch (Exception e) {
             response.setStatusCode(400);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }
@@ -177,7 +177,7 @@ public class UserService implements IUserService {
             response.setMessage("Successfully retrieved user");
         } catch (Exception e) {
             response.setStatusCode(400);
-            response.setMessage("Something went wrong"+e.getMessage());
+            response.setMessage("Something went wrong "+e.getMessage());
         }
         return response;
     }

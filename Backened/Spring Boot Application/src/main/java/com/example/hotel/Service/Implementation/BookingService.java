@@ -16,6 +16,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -32,8 +33,10 @@ public class BookingService implements IBookingService {
     public Response bookRoom(long roomId, long userId, BookingEntity bookingEntity) {
         Response response = new Response();
         try {
-            if (bookingEntity.getCheckOutDate().isBefore(bookingEntity.getCheckInDate())) {
-                throw new IllegalArgumentException("Check out date must be after Check in date");
+            if (bookingEntity.getCheckOutDate().isBefore(bookingEntity.getCheckInDate())
+                    || bookingEntity.getCheckInDate().isBefore(LocalDate.now())
+                    || bookingEntity.getCheckOutDate().isBefore(LocalDate.now())) {
+                throw new IllegalArgumentException("Please Enter the correct date");
             }
             RoomEntity room = roomRepo.findById(roomId).orElseThrow(() -> new HotelException("Room not found"));
             UserEntity user = userRepo.findById(userId).orElseThrow(() -> new HotelException("User not found"));

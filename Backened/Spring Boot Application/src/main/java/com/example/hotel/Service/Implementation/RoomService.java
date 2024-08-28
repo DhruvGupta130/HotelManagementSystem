@@ -150,7 +150,7 @@ public class RoomService implements IRoomService {
     @Override
     public Response getAvailableRoomsByDateAndType(LocalDate checkInDate, LocalDate checkOutDate, String roomType) {
         Response response = new Response();
-        if(checkInDate.isBefore(LocalDate.now()) || checkOutDate.isBefore(LocalDate.now()) || checkOutDate.isBefore(checkInDate)){
+        if(checkInDate.isBefore(LocalDate.now()) || checkOutDate.isBefore(LocalDate.now())){
             response.setMessage("Please Choose Correct Date");
             response.setStatusCode(400);
             return response;

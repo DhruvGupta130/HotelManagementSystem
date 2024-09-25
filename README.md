@@ -1,13 +1,72 @@
-A Hotel Management Project
-Frontend : React.Js
-Backend : Spring Boot
-The admin have the access where he can manage the services of the rooms and bookings like add, delete and update.
-The photos of the hotel rooms uploaded by the admin gets stored on the local server where the app is running.
-Due to this the app runs smoothly without any external source and dependencies.
-The user can can book room online, manage his booking and explore hotel services,
-as soon as an user books the room he gets the booking confirmation having all the deatils regarding the booking with a booking confirmation code
-through this code he can track his bookings and get all details regarding this and booking confirmation code also shows on his screen too.
-There is also the forgot password feature where if a user forgots his password he can reset it by verifying his identity through the email otp verification.
-If while registering user mistaken enters any wrong details can update his details by visiting to the profile info.
-If the user do not want to use our services anymore can delete his account as well by visiting the profile info.
-All the possible features has been integrated to it so that it can stand realtime.
+# 🏨 Hotel Management Project
+
+## 🌟 Overview
+
+This **Hotel Management Project** provides a comprehensive solution for managing hotel services and room bookings. The frontend is built with **React.js**, while the backend is powered by **Spring Boot**. The application is designed for both admin and user functionalities, ensuring a smooth and efficient experience.
+
+## ⚙️ Features
+
+### 🛠️ Admin Features
+
+- **Room Management**: Admins can add, delete, and update room services.
+- **Photo Management**: Upload and store hotel room photos on the local server for seamless access without external dependencies.
+
+### 🧑‍🤝‍🧑 User Features
+
+- **Online Booking**: Users can book rooms online and manage their bookings easily.
+- **Booking Confirmation**: Upon booking, users receive a confirmation with all booking details, including a unique booking confirmation code for tracking.
+- **Profile Management**: Users can update their personal information and details in their profiles.
+- **Account Deletion**: Users have the option to delete their accounts if they choose not to use the services anymore.
+- **Password Reset**: A "Forgot Password" feature allows users to reset their passwords through email OTP verification.
+
+## 📦 Installation
+
+### 🔧 Prerequisites
+
+Ensure you have the following installed:
+- Node.js
+- npm
+- Java (for Spring Boot)
+- Spring Boot
+
+### 🛠️ Setup Instructions
+
+1. **Clone the Repository**:
+   ```bash
+   git clone [repository link]
+   cd [project-directory]
+   ```
+
+2. **Frontend Setup**:
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
+
+3. **Backend Setup**:
+   ```bash
+   cd backend
+   ./mvnw spring-boot:run
+   ```
+
+## 🚀 Usage
+
+- **Admin Dashboard**: Access the admin panel to manage room services and bookings.
+- **User Dashboard**: Explore hotel services, book rooms, and manage bookings with ease.
+
+## 🤝 Contributing
+
+We welcome contributions! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
+
+## 🙏 Acknowledgments
+
+Special thanks to everyone who contributed to this project! Your support is greatly appreciated! 
+
+## 🌱 Future Enhancements
+
+- Integrate advanced booking features like group bookings and seasonal offers.
+- Improve user interface with enhanced design elements for better user experience.
+- Implement analytics for admin to track booking trends and user engagement.
+
+Thank you for checking out the **Hotel Management Project**! We hope you enjoy the experience and find it useful for your hotel management needs. 🏨✨

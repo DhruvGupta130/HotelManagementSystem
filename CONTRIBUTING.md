@@ -11,4 +11,4 @@ Start by forking the repository on GitHub. This creates a personal copy of the p
 Clone your forked repository to your local machine:
 ```bash
 git clone https://github.com/DhruvGupta130/My-Hotel.git
-cd project-name
+cd My-Hotel

@@ -58,6 +58,9 @@ Ensure you have the following installed:
 ## 🤝 Contributing
 
 We welcome contributions! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
+1. Fork the repository.
+2. Make your changes.
+3. Submit a pull request.
 
 ## 🙏 Acknowledgments
 

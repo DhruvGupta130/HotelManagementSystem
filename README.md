@@ -50,6 +50,9 @@ Ensure you have the following installed:
    ./mvnw spring-boot:run
    ```
 
+### Files to configure
+1. Backened/Spring Boot Application/src/main/resources/application.properties -> Configure database and SMTP server
+
 ## 🚀 Usage
 
 - **Admin Dashboard**: Access the admin panel to manage room services and bookings.

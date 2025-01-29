@@ -1,8 +1,9 @@
 import axios from "axios"
+import {BACKEND_URL} from "../../Config";
 
 export default class ApiService {
 
-    static BASE_URL = "http://localhost:8080"
+    static BASE_URL = BACKEND_URL;
 
     static getHeader() {
         const token = localStorage.getItem("token");
@@ -94,7 +95,7 @@ export default class ApiService {
     }
 
     /**ROOM */
-    /* This  adds a new room room to the database */
+    /* This  adds a new room to the database */
     static async addRoom(formData) {
         const result = await axios.post(`${this.BASE_URL}/rooms/add`, formData, {
             headers: {
@@ -105,14 +106,14 @@ export default class ApiService {
         return result.data;
     }
 
-    /* This  gets all availavle rooms */
+    /* This  gets all available rooms */
     static async getAllAvailableRooms() {
         const result = await axios.get(`${this.BASE_URL}/rooms/available-rooms`)
         return result.data
     }
 
 
-    /* This  gets all availavle by dates rooms from the database with a given date and a room type */
+    /* This  gets all available by dates rooms from the database with a given date and a room type */
     static async getAvailableRoomsByDateAndType(checkInDate, checkOutDate, roomType) {
         const result = await axios.get(
             `${this.BASE_URL}/rooms/available-rooms-by-date-and-type?checkInDate=${checkInDate}
@@ -121,7 +122,7 @@ export default class ApiService {
         return result.data
     }
 
-    /* This  gets all room types from thee database */
+    /* This  gets all room types from the database */
     static async getRoomTypes() {
         const response = await axios.get(`${this.BASE_URL}/rooms/types`)
         return response.data
@@ -131,13 +132,13 @@ export default class ApiService {
         const result = await axios.get(`${this.BASE_URL}/rooms/all`)
         return result.data
     }
-    /* This funcction gets a room by the id */
+    /* This function gets a room by the id */
     static async getRoomById(roomId) {
         const result = await axios.get(`${this.BASE_URL}/rooms/get-by-id/${roomId}`)
         return result.data
     }
 
-    /* This  deletes a room by the Id */
+    /* This  deletes a room by the id */
     static async deleteRoom(roomId) {
         const result = await axios.delete(`${this.BASE_URL}/rooms/delete/${roomId}`, {
             headers: this.getHeader()
@@ -158,7 +159,7 @@ export default class ApiService {
 
 
     /**BOOKING */
-    /* This  saves a new booking to the databse */
+    /* This  saves a new booking to the database */
     static async bookRoom(roomId, userId, booking) {
 
         console.log("USER ID IS: " + userId)
@@ -169,7 +170,7 @@ export default class ApiService {
         return response.data
     }
 
-    /* This  gets alll bokings from the database */
+    /* This  gets all bookings from the database */
     static async getAllBookings() {
         const result = await axios.get(`${this.BASE_URL}/bookings/all`, {
             headers: this.getHeader()
@@ -177,7 +178,7 @@ export default class ApiService {
         return result.data
     }
 
-    /* This  get booking by the cnfirmation code */
+    /* This  get booking by the confirmation code */
     static async getBookingByConfirmationCode(bookingCode) {
         const result = await axios.get(`${this.BASE_URL}/bookings/get-by-code/${bookingCode}`)
         return result.data

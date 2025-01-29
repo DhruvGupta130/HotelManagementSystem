@@ -28,7 +28,7 @@ const AddRoomPage = () => {
                 console.error('Error fetching room types:', error.message);
             }
         };
-        fetchRoomTypes();
+        fetchRoomTypes().then(r => r);
     }, []);
 
 

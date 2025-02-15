@@ -4,6 +4,8 @@
 
 This **Hotel Management Project** provides a comprehensive solution for managing hotel services and room bookings. The frontend is built with **React.js**, while the backend is powered by **Spring Boot**. The application is designed for both admin and user functionalities, ensuring a smooth and efficient experience.
 
+Live Website: https://guptahotel.netlify.app/
+
 ## ⚙️ Features
 
 ### 🛠️ Admin Features

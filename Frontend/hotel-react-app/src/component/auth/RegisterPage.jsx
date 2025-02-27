@@ -14,6 +14,7 @@ function RegisterPage() {
 
     const [errorMessage, setErrorMessage] = useState('');
     const [successMessage, setSuccessMessage] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -35,13 +36,15 @@ function RegisterPage() {
             setTimeout(() => setErrorMessage(''), 5000);
             return;
         }
+
+        setLoading(true);
+        setErrorMessage('');
+        setSuccessMessage('');
+
         try {
-            // Call the register method from ApiService
             const response = await ApiService.registerUser(formData);
 
-            // Check if the response is successful
             if (response.statusCode === 200) {
-                // Clear the form fields after successful registration
                 setFormData({
                     name: '',
                     email: '',
@@ -54,10 +57,11 @@ function RegisterPage() {
                     navigate('/');
                 }, 3000);
             }
-        }
-         catch (error) {
-            setErrorMessage(error.response?.data?.message || error.message);
+        } catch (error) {
+            setErrorMessage(error.response?.data?.message || 'An error occurred. Please try again.');
             setTimeout(() => setErrorMessage(''), 5000);
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -81,9 +85,10 @@ function RegisterPage() {
                     <label>Password:</label>
                     <input type="password" name="password" value={formData.password} onChange={handleInputChange} required />
                 </div>
+                {loading && <p className="loading-message">Registering, please wait...</p>}
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
                 {successMessage && <p className="success-message">{successMessage}</p>}
-                <button type="submit">Register</button>
+                <button type="submit" disabled={loading}>{loading ? 'Registering...' : 'Register'}</button>
             </form>
             <p className="register-link">
                 Already have an account? <a href="/login">Login</a>

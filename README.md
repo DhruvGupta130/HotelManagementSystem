@@ -67,6 +67,9 @@ We welcome contributions! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for
 2. Make your changes.
 3. Submit a pull request.
 
+## 📄 License
+This project is licensed under the [MIT License](LICENSE.txt).
+
 ## 🙏 Acknowledgments
 
 Special thanks to everyone who contributed to this project! Your support is greatly appreciated! 

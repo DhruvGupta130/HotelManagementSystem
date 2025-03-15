@@ -19,7 +19,10 @@ public class RoomEntity {
     private String roomType;
     private BigDecimal roomPrice;
     private String roomPhotoUrl;
+    
+    @Column(columnDefinition = "TEXT")
     private String roomDescription;
+    
     @OneToMany(mappedBy = "room", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<BookingEntity> bookings = new ArrayList<>();
 

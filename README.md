@@ -2,7 +2,7 @@
 
 ## 🌟 Overview
 
-This **Hotel Management Project** provides a comprehensive solution for managing hotel services and room bookings. The frontend is built with **React.js**, while the backend is powered by **Spring Boot** and **MySQL**. The application is designed for both admin and user functionalities, ensuring a smooth and efficient experience.
+This **Hotel Management Project** provides a comprehensive solution for managing hotel services and room bookings. The frontend is built with **React.js**, while the backend is powered by **Spring Boot** and **MySQL**. The application supports both **admin and user functionalities**, ensuring a seamless experience.
 
 🔗 **Live Website**: https://guptahotel.netlify.app/
 
@@ -10,37 +10,42 @@ This **Hotel Management Project** provides a comprehensive solution for managing
 
 ### 🛠️ Admin Features
 
-- **Room Management**: Admins can add, delete, and update room services.
-- **Photo Management**: Upload and store hotel room photos on the local server for seamless access without external dependencies.
+- **Dashboard**: Manage rooms, bookings, and users in an interactive admin panel.
+- **Room Management**: Add, update, and delete hotel room details.
+- **Booking Management**: View, approve, and cancel bookings as needed.
+- **Photo Management**: Upload and store hotel room images securely.
+- **User Management**: View user details and manage accounts efficiently.
 
 ### 🧑‍🤝‍🧑 User Features
 
-- **Online Booking**: Users can book rooms online and manage their bookings easily.
-- **Booking Confirmation**: Users receive a confirmation with all booking details, including a unique booking confirmation code for tracking.
-- **Profile Management**: Users can update their personal information and details in their profiles.
-- **Account Deletion**: Users have the option to delete their accounts if they choose not to use the services anymore.
-- **Password Reset**: A "Forgot Password" feature allows users to reset their passwords through email OTP verification.
+- **Online Room Booking**: Easily book available rooms based on preferences.
+- **Booking Confirmation**: Receive a confirmation email with a unique booking ID.
+- **Profile Management**: Users can update their details and manage bookings.
+- **Password Reset**: Secure email OTP verification for forgotten passwords.
+- **Account Deletion**: Users can delete their accounts if they no longer require the service.
 
-## 📦 Installation
+## 📦 Installation Guide
 
 ### 🔧 Prerequisites
 
 Ensure you have the following installed:
-- Node.js & npm
-- Java (JDK 17+ for Spring Boot)
-- Spring Boot
-- MySQL Database
-- Maven
+
+- **Node.js** (Frontend)
+- **npm** (Package Manager)
+- **Java JDK 17+** (Spring Boot Backend)
+- **Spring Boot**
+- **MySQL** (Database)
+- **Maven** (Build Tool)
 
 ### 🛠️ Setup Instructions
 
-1. **Clone the Repository**:
+1. **Clone the Repository**
    ```bash
    git clone [repository link]
    cd [project-directory]
    ```
 
-2. **Database Setup (MySQL)**:
+2. **Database Setup (MySQL)**
    - Install MySQL and create a database:
      ```sql
      CREATE DATABASE hotel_management;
@@ -53,14 +58,14 @@ Ensure you have the following installed:
      spring.jpa.hibernate.ddl-auto=update
      ```
 
-3. **Frontend Setup**:
+3. **Frontend Setup**
    ```bash
    cd frontend
    npm install
    npm start
    ```
 
-4. **Backend Setup**:
+4. **Backend Setup**
    ```bash
    cd backend
    ./mvnw spring-boot:run
@@ -68,26 +73,49 @@ Ensure you have the following installed:
 
 ## 🚀 Usage
 
-- **Admin Dashboard**: Access the admin panel to manage room services and bookings.
-- **User Dashboard**: Explore hotel services, book rooms, and manage bookings with ease.
+- **Admin Panel**: Manage rooms, users, and bookings.
+- **User Dashboard**: Explore rooms, book stays, and manage reservations.
+
+## 🔍 Technologies Used
+
+### 🌐 Frontend
+- **React.js** – Interactive UI components
+- **Redux** – State management
+- **Material UI** – UI Styling
+
+### 🖥️ Backend
+- **Spring Boot** – REST API Development
+- **Spring Security** – Authentication & Authorization
+- **MySQL** – Database Management
+
+### 🛠️ Additional Services
+- **Cloudinary** – Image storage and management
+- **Email Service** – SMTP-based email notifications
 
 ## 🤝 Contributing
 
-We welcome contributions! Please follow these steps:
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature-name`).
-3. Make your changes and commit (`git commit -m "Added feature"`).
-4. Push to the branch (`git push origin feature-name`).
-5. Submit a pull request.
+We welcome contributions! Follow these steps:
 
-## 📄 License
-This project is licensed under the [MIT License](LICENSE.txt).
+1. **Fork the repository**.
+2. **Create a feature branch** (`git checkout -b feature-name`).
+3. **Make changes and commit** (`git commit -m "Added feature"`).
+4. **Push to your branch** (`git push origin feature-name`).
+5. **Submit a pull request**.
 
 ## 🌱 Future Enhancements
 
-- **Advanced Booking Features**: Support for group bookings and seasonal offers.
-- **Improved UI**: Enhanced user experience with a modern design.
-- **Analytics Dashboard**: Admins can track booking trends and user engagement.
+- **AI-Based Booking Suggestions**: Recommend rooms based on user preferences.
+- **Chat Support**: Implement live chat for customer service.
+- **Payment Gateway Integration**: Enable online payment options.
 
-🙏 **Thank You for Checking Out This Project!** 🚀  
-Feel free to contribute and improve the system! 🏨✨
+## 🙏 Acknowledgment
+
+This project was inspired by **Phegon Dev** tutorials and extended with additional functionalities and optimizations.
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+🚀 **Thank you for checking out the project! Feel free to contribute and enhance the system.** 🏨✨

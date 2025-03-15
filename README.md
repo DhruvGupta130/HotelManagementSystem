@@ -2,9 +2,9 @@
 
 ## 🌟 Overview
 
-This **Hotel Management Project** provides a comprehensive solution for managing hotel services and room bookings. The frontend is built with **React.js**, while the backend is powered by **Spring Boot**. The application is designed for both admin and user functionalities, ensuring a smooth and efficient experience.
+This **Hotel Management Project** provides a comprehensive solution for managing hotel services and room bookings. The frontend is built with **React.js**, while the backend is powered by **Spring Boot** and **MySQL**. The application is designed for both admin and user functionalities, ensuring a smooth and efficient experience.
 
-Live Website: https://guptahotel.netlify.app/
+🔗 **Live Website**: https://guptahotel.netlify.app/
 
 ## ⚙️ Features
 
@@ -16,7 +16,7 @@ Live Website: https://guptahotel.netlify.app/
 ### 🧑‍🤝‍🧑 User Features
 
 - **Online Booking**: Users can book rooms online and manage their bookings easily.
-- **Booking Confirmation**: Upon booking, users receive a confirmation with all booking details, including a unique booking confirmation code for tracking.
+- **Booking Confirmation**: Users receive a confirmation with all booking details, including a unique booking confirmation code for tracking.
 - **Profile Management**: Users can update their personal information and details in their profiles.
 - **Account Deletion**: Users have the option to delete their accounts if they choose not to use the services anymore.
 - **Password Reset**: A "Forgot Password" feature allows users to reset their passwords through email OTP verification.
@@ -26,10 +26,11 @@ Live Website: https://guptahotel.netlify.app/
 ### 🔧 Prerequisites
 
 Ensure you have the following installed:
-- Node.js
-- npm
-- Java (for Spring Boot)
+- Node.js & npm
+- Java (JDK 17+ for Spring Boot)
 - Spring Boot
+- MySQL Database
+- Maven
 
 ### 🛠️ Setup Instructions
 
@@ -39,21 +40,31 @@ Ensure you have the following installed:
    cd [project-directory]
    ```
 
-2. **Frontend Setup**:
+2. **Database Setup (MySQL)**:
+   - Install MySQL and create a database:
+     ```sql
+     CREATE DATABASE hotel_management;
+     ```
+   - Update **backend/src/main/resources/application.properties** with:
+     ```properties
+     spring.datasource.url=jdbc:mysql://localhost:3306/hotel_management
+     spring.datasource.username=root
+     spring.datasource.password=yourpassword
+     spring.jpa.hibernate.ddl-auto=update
+     ```
+
+3. **Frontend Setup**:
    ```bash
    cd frontend
    npm install
    npm start
    ```
 
-3. **Backend Setup**:
+4. **Backend Setup**:
    ```bash
    cd backend
    ./mvnw spring-boot:run
    ```
-
-### Files to configure
-1. Backened/Spring Boot Application/src/main/resources/application.properties -> Configure database and SMTP server
 
 ## 🚀 Usage
 
@@ -62,22 +73,21 @@ Ensure you have the following installed:
 
 ## 🤝 Contributing
 
-We welcome contributions! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get involved.
+We welcome contributions! Please follow these steps:
 1. Fork the repository.
-2. Make your changes.
-3. Submit a pull request.
+2. Create a feature branch (`git checkout -b feature-name`).
+3. Make your changes and commit (`git commit -m "Added feature"`).
+4. Push to the branch (`git push origin feature-name`).
+5. Submit a pull request.
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE.txt).
 
-## 🙏 Acknowledgments
-
-Special thanks to everyone who contributed to this project! Your support is greatly appreciated! 
-
 ## 🌱 Future Enhancements
 
-- Integrate advanced booking features like group bookings and seasonal offers.
-- Improve user interface with enhanced design elements for better user experience.
-- Implement analytics for admin to track booking trends and user engagement.
+- **Advanced Booking Features**: Support for group bookings and seasonal offers.
+- **Improved UI**: Enhanced user experience with a modern design.
+- **Analytics Dashboard**: Admins can track booking trends and user engagement.
 
-Thank you for checking out the **Hotel Management Project**! We hope you enjoy the experience and find it useful for your hotel management needs. 🏨✨
+🙏 **Thank You for Checking Out This Project!** 🚀  
+Feel free to contribute and improve the system! 🏨✨

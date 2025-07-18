@@ -89,7 +89,7 @@ Ensure you have the following installed:
 - **MySQL** – Database Management
 
 ### 🛠️ Additional Services
-- **Cloudinary** – Image storage and management
+- **Local Storage Server** – Image storage and management
 - **Email Service** – SMTP-based email notifications
 
 ## 🤝 Contributing

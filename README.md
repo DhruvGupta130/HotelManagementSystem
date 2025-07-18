@@ -80,8 +80,7 @@ Ensure you have the following installed:
 
 ### 🌐 Frontend
 - **React.js** – Interactive UI components
-- **Redux** – State management
-- **Material UI** – UI Styling
+- **Axios** – Api calling
 
 ### 🖥️ Backend
 - **Spring Boot** – REST API Development
